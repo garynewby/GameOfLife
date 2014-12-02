@@ -13,8 +13,8 @@ Rules:
 
 Implementation Notes
 --------------------
-Tap Random to create initial state then start/stop.  
-Tap a cell to change it's state and influence the evolving patterns.  
+Tap "Random" to create initial state then "Start" or "Stop".  
+Tap any cell to change it's state while running, to influence the evolving patterns.  
 Universal iPad app.  
 
 Author
