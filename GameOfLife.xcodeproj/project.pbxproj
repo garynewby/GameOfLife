@@ -15,6 +15,8 @@
 		4EA8E66B19EAAAFA00FD96CC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EA8E66A19EAAAFA00FD96CC /* Images.xcassets */; };
 		4EA8E67719EAAD8300FD96CC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EA8E67319EAAD8300FD96CC /* LaunchScreen.xib */; };
 		4EA8E67819EAAD8300FD96CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EA8E67519EAAD8300FD96CC /* Main.storyboard */; };
+		4EAE88221A2E679000561310 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 4EAE88201A2E679000561310 /* LICENSE */; };
+		4EAE88231A2E679000561310 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 4EAE88211A2E679000561310 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		4EA8E66A19EAAAFA00FD96CC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = GameOfLife/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		4EA8E67419EAAD8300FD96CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		4EA8E67619EAAD8300FD96CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		4EAE88201A2E679000561310 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		4EAE88211A2E679000561310 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 		4E099B8519DEB77F00BAC93F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4EAE88211A2E679000561310 /* README.md */,
+				4EAE88201A2E679000561310 /* LICENSE */,
 				4EA8E65E19EAAABE00FD96CC /* Info.plist */,
 				4EA8E65F19EAAABE00FD96CC /* main.m */,
 				4EA8E66A19EAAAFA00FD96CC /* Images.xcassets */,
@@ -157,6 +163,7 @@
 				4EA8E67819EAAD8300FD96CC /* Main.storyboard in Resources */,
 				4EA8E66019EAAABE00FD96CC /* Info.plist in Resources */,
 				4EA8E66B19EAAAFA00FD96CC /* Images.xcassets in Resources */,
+				4EAE88221A2E679000561310 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +176,7 @@
 			files = (
 				4EA8E66119EAAABE00FD96CC /* main.m in Sources */,
 				4E043BB31A2E5AD700DF4156 /* GOLCellView.m in Sources */,
+				4EAE88231A2E679000561310 /* README.md in Sources */,
 				4E043BB11A2E5AD700DF4156 /* GOLAppDelegate.m in Sources */,
 				4E043BB41A2E5AD700DF4156 /* GOLViewController.m in Sources */,
 			);
