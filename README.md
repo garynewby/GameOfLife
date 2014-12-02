@@ -1,8 +1,8 @@
 Game of Life (iOS)
 ------------------
 A cellular automaton devised by the British mathematician John Horton Conway in 1970.
-The 4 simple rules below are applied to each cell in the system in passes.
-From this the state of each cell is calculated to be alive or dead.
+The 4 simple rules below are applied to each cell in the system each pass, and the 
+state of each cell is calculated as alive or dead.
 
 Rules:
 1. Any live cell with less than two live neighbours dies, as if caused by under-population.
