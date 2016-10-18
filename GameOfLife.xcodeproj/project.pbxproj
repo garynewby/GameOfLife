@@ -10,6 +10,7 @@
 		4E043BB11A2E5AD700DF4156 /* GOLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E043BAA1A2E5AD700DF4156 /* GOLAppDelegate.m */; };
 		4E043BB31A2E5AD700DF4156 /* GOLCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E043BAE1A2E5AD700DF4156 /* GOLCellView.m */; };
 		4E043BB41A2E5AD700DF4156 /* GOLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E043BB01A2E5AD700DF4156 /* GOLViewController.m */; };
+		4E399A401DB6344C00107C36 /* GOLGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E399A3F1DB6344C00107C36 /* GOLGameController.m */; };
 		4EA8E66019EAAABE00FD96CC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EA8E65E19EAAABE00FD96CC /* Info.plist */; };
 		4EA8E66119EAAABE00FD96CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA8E65F19EAAABE00FD96CC /* main.m */; };
 		4EA8E66B19EAAAFA00FD96CC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EA8E66A19EAAAFA00FD96CC /* Images.xcassets */; };
@@ -27,6 +28,8 @@
 		4E043BAF1A2E5AD700DF4156 /* GOLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLViewController.h; path = GameOfLife/Classes/GOLViewController.h; sourceTree = SOURCE_ROOT; };
 		4E043BB01A2E5AD700DF4156 /* GOLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GOLViewController.m; path = GameOfLife/Classes/GOLViewController.m; sourceTree = SOURCE_ROOT; };
 		4E099B8219DEB77F00BAC93F /* GameOfLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameOfLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E399A3E1DB6344C00107C36 /* GOLGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLGameController.h; path = GameOfLife/Classes/GOLGameController.h; sourceTree = SOURCE_ROOT; };
+		4E399A3F1DB6344C00107C36 /* GOLGameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GOLGameController.m; path = GameOfLife/Classes/GOLGameController.m; sourceTree = SOURCE_ROOT; };
 		4EA8E65E19EAAABE00FD96CC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = GameOfLife/Info.plist; sourceTree = SOURCE_ROOT; };
 		4EA8E65F19EAAABE00FD96CC /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = GameOfLife/main.m; sourceTree = SOURCE_ROOT; };
 		4EA8E66A19EAAAFA00FD96CC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = GameOfLife/Images.xcassets; sourceTree = SOURCE_ROOT; };
@@ -71,6 +74,8 @@
 				4E043BAA1A2E5AD700DF4156 /* GOLAppDelegate.m */,
 				4E043BAF1A2E5AD700DF4156 /* GOLViewController.h */,
 				4E043BB01A2E5AD700DF4156 /* GOLViewController.m */,
+				4E399A3E1DB6344C00107C36 /* GOLGameController.h */,
+				4E399A3F1DB6344C00107C36 /* GOLGameController.m */,
 				4E043BAD1A2E5AD700DF4156 /* GOLCellView.h */,
 				4E043BAE1A2E5AD700DF4156 /* GOLCellView.m */,
 			);
@@ -174,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E399A401DB6344C00107C36 /* GOLGameController.m in Sources */,
 				4EA8E66119EAAABE00FD96CC /* main.m in Sources */,
 				4E043BB31A2E5AD700DF4156 /* GOLCellView.m in Sources */,
 				4EAE88231A2E679000561310 /* README.md in Sources */,
@@ -285,6 +291,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GameOfLife/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = GameOfLife;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -296,6 +303,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GameOfLife/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = GameOfLife;
 				TARGETED_DEVICE_FAMILY = 2;
