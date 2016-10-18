@@ -1,4 +1,4 @@
-Game of Life (iOS)
+Game of Life (iOS 9 iPad)
 ------------------
 
 ![alt tag](https://raw.githubusercontent.com/garynewby/GameOfLife/master/GameOfLife/Images.xcassets/GOL.imageset/GOL.png)
@@ -16,10 +16,9 @@ Rules:
 
 Implementation Notes
 --------------------
-Tap "Random" to create initial state then "Start" or "Stop".  
-Tap any cell to change it's state while running, to influence the evolving patterns.  
-iPad app.  
-
+Tap "New" to start from a random state, and "Stop" or "Continue" to halt or continue iterating.  
+Tap any cell to change it's state while running or stopped, to influence the patterns that will evolve.  
+ 
 Author
 ------
 Gary Newby
