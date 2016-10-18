@@ -3,7 +3,7 @@
 //  GameOfLife
 //
 //  Created by Gary on 10/18/16.
-//  Copyright © 2016 guardian. All rights reserved.
+//  Copyright (c) 2014 Gary Newby. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
