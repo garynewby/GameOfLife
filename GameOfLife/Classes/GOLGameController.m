@@ -91,7 +91,7 @@
         cellView.backgroundColor = [GOLGameController deadColour];
         cellView.alive = NO;
         cellView.alivePrePass = NO;
-        if (randomise && arc4random_uniform(16) == 0) {
+        if (randomise && arc4random_uniform(3) == 0) {
             cellView.alive = YES;
             cellView.backgroundColor = [GOLGameController aliveColour];
         }
@@ -107,7 +107,7 @@
         return;
     }
     self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(gameLoop)];
-    self.displayLink.frameInterval = 12.0;
+    self.displayLink.frameInterval = 4.0;
     [self.displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
 }
 
