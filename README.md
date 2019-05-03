@@ -1,7 +1,7 @@
 Game of Life for iPad
 ------------------
 
-![alt tag](https://raw.githubusercontent.com/garynewby/GameOfLife/master/GameOfLife/Images.xcassets/GOL.imageset/GOL.png)
+![alt tag](https://github.com/garynewby/Game-of-Life/blob/master/GameOfLife/Assets.xcassets/GOL.imageset/GOL.png)
 
 A cellular automaton devised by the British mathematician John Horton Conway in 1970.  
 The 4 simple rules below are applied to each cell in the system each pass, and the  
