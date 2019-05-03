@@ -12,38 +12,46 @@ protocol GameControllerDelegate: AnyObject {
     func updateIterationsLabel(text: String)
 }
 
-class GameController {
-    weak var delegate: GameControllerDelegate?
-    var view: UIView
-    var cellViewArray: [CellView] = []
-    var cellViewInnerArray: [CellView] = []
-    var generation: Int = 0
-    var displayLink: CADisplayLink?
-    let columns: Int = 50
-    let rows: Int = 63
-    let cellSpace: CGFloat = 2.0
+final class GameController {
+    private weak var delegate: GameControllerDelegate?
+    private var view: UIView
+    private var cellViewArray: [CellView] = []
+    private var cellViewInnerArray: [CellView] = []
+    private var generation: Int = 0
+    private var displayLink: CADisplayLink?
+    private var rows: Int = 0
+    private let cellSpace: CGFloat = 1.0
+    private let columns: Int
 
-    static let aliveColour: UIColor = UIColor(white: 0.9, alpha: 1.0)
-    static let deadColour: UIColor = UIColor(white: 0.1, alpha: 1.0)
+    static let aliveColour: UIColor = UIColor(white: 0.90, alpha: 1.0)
+    static let deadColour: UIColor = UIColor(white: 0.10, alpha: 1.0)
 
     init(view: UIView, delegate: GameControllerDelegate) {
         self.view = view
         self.delegate = delegate
-        //initDisplayLink()
+        columns = UIDevice.current.userInterfaceIdiom == .pad ? 44 + 2 : 22 + 2 // add 2 columns for L/R borders
         addCells()
     }
 
-    func addCells() {
+    private func addCells() {
         cellViewArray = []
         cellViewInnerArray = []
 
-        let cellSize = (view.bounds.width - ((CGFloat(columns) - 1) * cellSpace) - 20.0) / CGFloat(columns)
+        print(UIScreen.main.bounds)
+        print(view.bounds)
+
+        let cellSize = (view.bounds.width - (cellSpace * CGFloat(columns - 3))) / CGFloat(columns - 2)
         var cellCount = 0
         var cellCountInner = 0
+
+        rows = Int(((view.bounds.height - cellSpace) / (cellSize + cellSpace)).rounded(.up))
+
         for r in 0..<rows {
             for c in 0..<columns {
-                let cellView = CellView(frame: CGRect(x: 10 + (CGFloat(c) * (cellSize + cellSpace)), y: 20 + (CGFloat(r) * (cellSize + self.cellSpace)), width: cellSize, height: cellSize), index: cellCount, columns: columns)
+                let frame = CGRect(x: (CGFloat(c) * (cellSize + cellSpace)) - cellSize, y: (CGFloat(r) * (cellSize + self.cellSpace)) - cellSize, width: cellSize, height: cellSize)
+                let cellView = CellView(frame: frame, index: cellCount, columns: columns)
                 cellViewArray.append(cellView)
+                cellView.backgroundColor = UIColor.green
                 cellView.backgroundColor = view.backgroundColor
                 if insideBorder(row: r, column: c) {
                     cellViewInnerArray.append(cellView)
@@ -56,16 +64,16 @@ class GameController {
         }
     }
 
-    func insideBorder(row: Int, column: Int) -> Bool {
+    private func insideBorder(row: Int, column: Int) -> Bool {
         return (row > 0 && row < (rows - 1) && column >= 1 && column < (columns - 1))
     }
 
-    // Mark - Loop
+    // MARK: - Loop
 
-    @objc func gameLoop() {
+    @objc private func gameLoop() {
         cellViewInnerArray.forEach { checkLifeState(cellView: $0) }
         cellViewInnerArray.forEach { updateLifeState(cellView: $0) }
-        delegate?.updateIterationsLabel(text: "Iteration: \(generation)")
+        updateLabel()
         generation += 1;
     }
 
@@ -80,8 +88,12 @@ class GameController {
             }
         }
         generation = 0
-        delegate?.updateIterationsLabel(text: "Iteration: \(generation)")
+        updateLabel()
         continueGame()
+    }
+
+    func updateLabel() {
+        delegate?.updateIterationsLabel(text: "Generation: \(generation)")
     }
 
     func continueGame() {
@@ -91,21 +103,21 @@ class GameController {
         initDisplayLink()
     }
 
-    func initDisplayLink() {
-        displayLink = CADisplayLink(target: self, selector: #selector(gameLoop))
-        //displayLink?.preferredFramesPerSecond = 30
-        displayLink?.add(to: RunLoop.main, forMode: .default)
-    }
-
     func stopGame() {
         displayLink?.invalidate()
         displayLink = nil
     }
 
-    func checkLifeState(cellView: CellView) {
+    private func initDisplayLink() {
+        displayLink = CADisplayLink(target: self, selector: #selector(gameLoop))
+        displayLink?.preferredFramesPerSecond = 15
+        displayLink?.add(to: RunLoop.main, forMode: .default)
+    }
+
+    private func checkLifeState(cellView: CellView) {
         var liveNeighbouringCellCount = 0;
         for index in cellView.matrixArray {
-            liveNeighbouringCellCount += checkCellAt(index: index);
+            liveNeighbouringCellCount += checkCellIsAliveAt(index: index);
         }
         // Any live cell with fewer than two live neighbours dies, as if caused by under-population
         if (cellView.alive && liveNeighbouringCellCount < 2) {
@@ -129,12 +141,12 @@ class GameController {
         }
     }
 
-    func updateLifeState(cellView: CellView) {
+    private func updateLifeState(cellView: CellView) {
         cellView.alive = cellView.alivePrePass;
-        cellView.backgroundColor = cellView.alive ? UIColor(hue: (CGFloat(cellView.age) * 0.01), saturation: 0.7, brightness: 0.8, alpha: 1.0) : GameController.deadColour
+        cellView.backgroundColor = cellView.alive ? UIColor(hue: (CGFloat(cellView.age) * 0.03), saturation: 1.0, brightness: 1.0, alpha: 1.0) : GameController.deadColour
     }
 
-    func checkCellAt(index: Int) -> Int {
+    private func checkCellIsAliveAt(index: Int) -> Int {
         if index >= cellViewArray.count {
             return 0
         }

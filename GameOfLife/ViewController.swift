@@ -10,11 +10,13 @@ import UIKit
 
 class ViewController: UIViewController, GameControllerDelegate {
     @IBOutlet weak var iterationLabel: UILabel!
+    @IBOutlet weak var cellsView: UIView!
     private var gameController: GameController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        gameController = GameController(view: view, delegate: self)
+        view.isOpaque = true
+        gameController = GameController(view: cellsView, delegate: self)
     }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -33,11 +35,10 @@ class ViewController: UIViewController, GameControllerDelegate {
         gameController?.stopGame()
     }
 
-    // Mark - GameControllerDelegate
+    // MARK: - GameControllerDelegate
 
     func updateIterationsLabel(text: String) {
         iterationLabel.text = text
     }
-
 }
 
