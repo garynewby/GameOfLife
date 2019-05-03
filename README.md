@@ -1,4 +1,4 @@
-Game of Life for iPad
+Game of Life iOS
 ------------------
 
 <img src="https://github.com/garynewby/Game-of-Life/blob/master/GameOfLife/Assets.xcassets/GOL.imageset/GOL.png" width="320">
