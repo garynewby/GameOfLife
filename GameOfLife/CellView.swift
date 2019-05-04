@@ -8,30 +8,30 @@
 
 import SpriteKit
 
-class CellView: SKShapeNode {
-    private var index: Int
-    private var tapRecognizer: UITapGestureRecognizer?
+final class CellView: SKShapeNode {
+    var index: Int = 0
     var age: Int = 0
     var alive: Bool = false;
     var alivePrePass: Bool = false;
-    var matrixArray: [Int]
+    var matrixArray: [Int] = []
 
     init(frame: CGRect, index: Int, columns: Int) {
-        self.index = index;
-        matrixArray = [(index - (columns + 1)), (index - columns), (index - (columns-1)), (index + 1), (index + (columns+1)), (index + columns), (index + (columns-1)), (index - 1)]
         super.init()
+        self.index = index;
         self.path = CGPath(ellipseIn: frame, transform: nil)
         isUserInteractionEnabled = true
-        fillColor = GameController.deadColour
+        fillColor = GameScene.deadColour
         lineWidth = 0
+        matrixArray = [(index - (columns + 1)), (index - columns), (index - (columns-1)), (index + 1),
+                       (index + (columns + 1)), (index + columns), (index + (columns-1)), (index - 1)]
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    @objc private func toggleLive() {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         alive.toggle()
-        fillColor = alive ? GameController.aliveColour : GameController.deadColour
+        fillColor = alive ? GameScene.aliveColour : GameScene.deadColour
     }
 }

@@ -13,7 +13,7 @@
 		4E2A95A6227B8BC100226240 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E2A95A4227B8BC100226240 /* LaunchScreen.storyboard */; };
 		4E2A95B1227B8BC100226240 /* GameOfLifeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2A95B0227B8BC100226240 /* GameOfLifeTests.swift */; };
 		4E2A95BC227B8BC100226240 /* GameOfLifeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2A95BB227B8BC100226240 /* GameOfLifeUITests.swift */; };
-		4E2A95CB227B8E0200226240 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2A95CA227B8E0200226240 /* GameController.swift */; };
+		4E2A95CB227B8E0200226240 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2A95CA227B8E0200226240 /* GameScene.swift */; };
 		4E2A95CD227B904B00226240 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2A95CC227B904B00226240 /* CellView.swift */; };
 		4E2A95D0227BA9E100226240 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E2A95CE227BA9E100226240 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -48,7 +48,7 @@
 		4E2A95B7227B8BC100226240 /* GameOfLifeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameOfLifeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E2A95BB227B8BC100226240 /* GameOfLifeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOfLifeUITests.swift; sourceTree = "<group>"; };
 		4E2A95BD227B8BC100226240 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4E2A95CA227B8E0200226240 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		4E2A95CA227B8E0200226240 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		4E2A95CC227B904B00226240 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		4E2A95CF227BA9E100226240 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,7 +103,7 @@
 			children = (
 				4E2A959B227B8BC100226240 /* AppDelegate.swift */,
 				4E2A959D227B8BC100226240 /* ViewController.swift */,
-				4E2A95CA227B8E0200226240 /* GameController.swift */,
+				4E2A95CA227B8E0200226240 /* GameScene.swift */,
 				4E2A95CC227B904B00226240 /* CellView.swift */,
 				4E2A95C9227B8BD100226240 /* Supporting */,
 			);
@@ -272,7 +272,7 @@
 			files = (
 				4E2A95CD227B904B00226240 /* CellView.swift in Sources */,
 				4E2A959E227B8BC100226240 /* ViewController.swift in Sources */,
-				4E2A95CB227B8E0200226240 /* GameController.swift in Sources */,
+				4E2A95CB227B8E0200226240 /* GameScene.swift in Sources */,
 				4E2A959C227B8BC100226240 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

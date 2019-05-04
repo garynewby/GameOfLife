@@ -8,14 +8,15 @@
 
 import SpriteKit
 
-class ViewController: UIViewController, GameControllerDelegate {
-    @IBOutlet weak var iterationLabel: UILabel!
+class ViewController: UIViewController {
     @IBOutlet weak var cellsView: SKView!
-    private var gameController: GameController?
+    @IBOutlet weak var pauseButton: UIButton!
+    private var gameController: GameScene?
+    private var isPaused = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        gameController = GameController(cellsView: cellsView, delegate: self)
+        gameController = GameScene(cellsView: cellsView)
     }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -26,18 +27,10 @@ class ViewController: UIViewController, GameControllerDelegate {
         gameController?.newGame(randomise: true)
     }
 
-    @IBAction func continueTapped(_ sender: Any) {
-        gameController?.continueGame()
-    }
-
-    @IBAction func stopTapped(_ sender: Any) {
-        gameController?.stopGame()
-    }
-
-    // MARK: - GameControllerDelegate
-
-    func updateIterationsLabel(text: String) {
-        iterationLabel.text = text
+    @IBAction func pauseTapped(_ sender: Any) {
+        isPaused.toggle()
+        gameController?.pauseGame(value: isPaused)
+        pauseButton.setTitle(isPaused ? "Continue" : "Pause", for: .normal)
     }
 }
 
