@@ -6,15 +6,16 @@
 //  Copyright © 2019 Gary Newby. All rights reserved.
 //
 
-import UIKit
+import SpriteKit
 
 protocol GameControllerDelegate: AnyObject {
     func updateIterationsLabel(text: String)
 }
 
 final class GameController {
+    private var scene: SKScene?
     private weak var delegate: GameControllerDelegate?
-    private var view: UIView
+    private var cellsView: SKView
     private var cellViewArray: [CellView] = []
     private var cellViewInnerArray: [CellView] = []
     private var generation: Int = 0
@@ -26,9 +27,15 @@ final class GameController {
     static let aliveColour: UIColor = UIColor(white: 0.90, alpha: 1.0)
     static let deadColour: UIColor = UIColor(white: 0.10, alpha: 1.0)
 
-    init(view: UIView, delegate: GameControllerDelegate) {
-        self.view = view
+    init(cellsView: SKView, delegate: GameControllerDelegate) {
+        self.cellsView = cellsView
         self.delegate = delegate
+
+        scene = SKScene(size: cellsView.bounds.size)
+        if let scene = scene {
+            cellsView.presentScene(scene)
+        }
+        
         columns = UIDevice.current.userInterfaceIdiom == .pad ? 44 + 2 : 22 + 2 // add 2 columns for L/R borders
         addCells()
     }
@@ -36,29 +43,24 @@ final class GameController {
     private func addCells() {
         cellViewArray = []
         cellViewInnerArray = []
-
-        print(UIScreen.main.bounds)
-        print(view.bounds)
-
-        let cellSize = (view.bounds.width - (cellSpace * CGFloat(columns - 3))) / CGFloat(columns - 2)
+        let cellSize = (cellsView.bounds.width - (cellSpace * CGFloat(columns - 3))) / CGFloat(columns - 2)
         var cellCount = 0
         var cellCountInner = 0
-
-        rows = Int(((view.bounds.height - cellSpace) / (cellSize + cellSpace)).rounded(.up))
+        rows = Int(((cellsView.bounds.height - cellSpace) / (cellSize + cellSpace)).rounded(.up))
 
         for r in 0..<rows {
             for c in 0..<columns {
                 let frame = CGRect(x: (CGFloat(c) * (cellSize + cellSpace)) - cellSize, y: (CGFloat(r) * (cellSize + self.cellSpace)) - cellSize, width: cellSize, height: cellSize)
                 let cellView = CellView(frame: frame, index: cellCount, columns: columns)
                 cellViewArray.append(cellView)
-                cellView.backgroundColor = UIColor.green
-                cellView.backgroundColor = view.backgroundColor
+                cellView.fillColor = UIColor.green
+                //cellView.fillColor = cellsView.fillColor
                 if insideBorder(row: r, column: c) {
                     cellViewInnerArray.append(cellView)
                     cellCountInner += 1
-                    cellView.backgroundColor = GameController.deadColour
+                    cellView.fillColor = GameController.deadColour
                 }
-                view.addSubview(cellView)
+                scene?.addChild(cellView)
                 cellCount += 1
             }
         }
@@ -79,12 +81,12 @@ final class GameController {
 
     func newGame(randomise: Bool) {
         for cellView in cellViewInnerArray {
-            cellView.backgroundColor = GameController.deadColour
+            cellView.fillColor = GameController.deadColour
             cellView.alive = false
             cellView.alivePrePass = false
             if (randomise && arc4random_uniform(3) == 0) {
                 cellView.alive = true
-                cellView.backgroundColor = GameController.aliveColour
+                cellView.fillColor = GameController.aliveColour
             }
         }
         generation = 0
@@ -143,7 +145,7 @@ final class GameController {
 
     private func updateLifeState(cellView: CellView) {
         cellView.alive = cellView.alivePrePass;
-        cellView.backgroundColor = cellView.alive ? UIColor(hue: (CGFloat(cellView.age) * 0.03), saturation: 1.0, brightness: 1.0, alpha: 1.0) : GameController.deadColour
+        cellView.fillColor = cellView.alive ? UIColor(hue: (CGFloat(cellView.age) * 0.03), saturation: 1.0, brightness: 1.0, alpha: 1.0) : GameController.deadColour
     }
 
     private func checkCellIsAliveAt(index: Int) -> Int {

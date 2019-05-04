@@ -6,17 +6,16 @@
 //  Copyright © 2019 Gary Newby. All rights reserved.
 //
 
-import UIKit
+import SpriteKit
 
 class ViewController: UIViewController, GameControllerDelegate {
     @IBOutlet weak var iterationLabel: UILabel!
-    @IBOutlet weak var cellsView: UIView!
+    @IBOutlet weak var cellsView: SKView!
     private var gameController: GameController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.isOpaque = true
-        gameController = GameController(view: cellsView, delegate: self)
+        gameController = GameController(cellsView: cellsView, delegate: self)
     }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {

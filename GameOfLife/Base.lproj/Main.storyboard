@@ -21,10 +21,10 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZbQ-zL-wwM">
                                 <rect key="frame" x="20" y="64" width="335" height="694"/>
                                 <subviews>
-                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FfX-6q-3Kj">
+                                    <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="36I-Hh-U3L">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="660"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </view>
+                                    </skView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="W6q-hr-vwR">
                                         <rect key="frame" x="0.0" y="660" width="335" height="34"/>
                                         <subviews>
@@ -79,7 +79,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="cellsView" destination="FfX-6q-3Kj" id="Tc0-fK-rXl"/>
+                        <outlet property="cellsView" destination="36I-Hh-U3L" id="Stb-9C-tsj"/>
                         <outlet property="iterationLabel" destination="gc8-Py-JfJ" id="jd5-Pf-Uzv"/>
                     </connections>
                 </viewController>
