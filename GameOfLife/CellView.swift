@@ -8,22 +8,19 @@
 
 import SpriteKit
 
-final class CellView: SKShapeNode {
-    var index: Int = 0
-    var age: Int = 0
-    var alive: Bool = false;
-    var alivePrePass: Bool = false;
-    var matrixArray: [Int] = []
+protocol CellViewDelegate: AnyObject {
+    func toggleAlive()
+}
 
-    init(frame: CGRect, index: Int, columns: Int) {
+final class CellView: SKShapeNode {
+    weak var delegate: CellViewDelegate?
+
+    init(frame: CGRect) {
         super.init()
-        self.index = index;
         self.path = CGPath(ellipseIn: frame, transform: nil)
         isUserInteractionEnabled = true
-        fillColor = GameScene.deadColour
         lineWidth = 0
-        matrixArray = [(index - (columns + 1)), (index - columns), (index - (columns-1)), (index + 1),
-                       (index + (columns + 1)), (index + columns), (index + (columns-1)), (index - 1)]
+        fillColor = GameScene.deadColour
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -31,7 +28,6 @@ final class CellView: SKShapeNode {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        alive.toggle()
-        fillColor = alive ? GameScene.aliveColour : GameScene.deadColour
+        delegate?.toggleAlive()
     }
 }

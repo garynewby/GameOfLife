@@ -9,8 +9,9 @@
 import SpriteKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var cellsView: SKView!
-    @IBOutlet weak var pauseButton: UIButton!
+    @IBOutlet private weak var cellsView: SKView!
+    @IBOutlet private weak var pauseButton: UIButton!
+
     private var gameController: GameScene?
     private var isPaused = false
 
@@ -24,7 +25,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func newTapped(_ sender: Any) {
-        gameController?.newGame(randomise: true)
+        gameController?.newGame()
     }
 
     @IBAction func pauseTapped(_ sender: Any) {

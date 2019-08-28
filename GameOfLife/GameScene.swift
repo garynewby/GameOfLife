@@ -10,21 +10,15 @@ import SpriteKit
 
 final class GameScene: SKScene {
     private var cellsView: SKView
-    private var cellViewArray: [CellView] = []
-    private var cellViewInnerArray: [CellView] = []
-    private var generation: Int = 0
-    private var rows: Int = 0
     private let cellSpace: CGFloat = 1.0
-    private let columns: Int
     private let cameraNode = SKCameraNode()
-
+    private var model = GameModel()
     static let backColour: UIColor = UIColor.black
     static let aliveColour: UIColor = UIColor(white: 1.0, alpha: 1.0)
     static let deadColour: UIColor = UIColor(white: 0.25, alpha: 1.0)
 
     init(cellsView: SKView) {
         self.cellsView = cellsView
-        columns = UIDevice.current.userInterfaceIdiom == .pad ? 46 : 30 // add 2 columns for L/R borders
         super.init(size: cellsView.bounds.size)
         addCells()
 
@@ -43,24 +37,26 @@ final class GameScene: SKScene {
     }
 
     private func addCells() {
+        let columns = model.columns
         let cellSize = (cellsView.bounds.width - (cellSpace * CGFloat(columns - 1))) / CGFloat(columns)
-        rows = Int((cellsView.bounds.height) / (cellSize + cellSpace))
-
-        cellViewArray = []
-        cellViewInnerArray = []
+        let rows = Int((cellsView.bounds.height) / (cellSize + cellSpace))
+        model.rows = rows
         var cellCount = 0
-        var cellCountInner = 0
 
-        for r in 0..<rows {
-            for c in 0..<columns {
-                let frame = CGRect(x: (CGFloat(c) * (cellSize + cellSpace)), y: (CGFloat(r) * (cellSize + self.cellSpace)), width: cellSize, height: cellSize)
-                let cellView = CellView(frame: frame, index: cellCount, columns: columns)
-                cellViewArray.append(cellView)
+        for row in 0..<rows {
+            for column in 0..<columns {
+                let frame = CGRect(x: (CGFloat(column) * (cellSize + cellSpace)), y: (CGFloat(row) * (cellSize + self.cellSpace)), width: cellSize, height: cellSize)
+                let cellView = CellView(frame: frame)
+                let matrixArray: [Int] = [(cellCount - (columns + 1)), (cellCount - columns), (cellCount - (columns-1)), (cellCount + 1), (cellCount + (columns + 1)), (cellCount + columns), (cellCount + (columns-1)), (cellCount - 1)]
+                let cellState = CellState(age: 0, alive: false, alivePrePass: false, matrixArray: matrixArray, view: cellView)
+
+                model.cellViewArray.append(cellState)
                 cellView.fillColor = GameScene.backColour
-                if insideBorder(row: r, column: c) {
-                    cellViewInnerArray.append(cellView)
-                    cellCountInner += 1
+
+                if insideBorder(row: row, column: column) {
+                    model.cellViewInnerArray.append(cellState)
                 }
+
                 addChild(cellView)
                 cellCount += 1
             }
@@ -68,28 +64,25 @@ final class GameScene: SKScene {
     }
 
     private func insideBorder(row: Int, column: Int) -> Bool {
-        return (row > 0 && row < (rows - 1) && column >= 1 && column < (columns - 1))
+        return (row > 0 && row < (model.rows - 1) && column >= 1 && column < (model.columns - 1))
     }
 
     // MARK: - Game loop
 
     override func update(_ currentTime: TimeInterval) {
-        cellViewInnerArray.forEach { checkLifeState(cellView: $0) }
-        cellViewInnerArray.forEach { updateLifeState(cellView: $0) }
-        generation += 1;
+        model.cellViewInnerArray.forEach { model.checkLifeState(cellState: $0) }
+        model.cellViewInnerArray.forEach { $0.alive = $0.alivePrePass }
+        model.generation += 1
     }
 
-    func newGame(randomise: Bool) {
-        for cellView in cellViewInnerArray {
-            cellView.fillColor = GameScene.deadColour
-            cellView.alive = false
-            cellView.alivePrePass = false
-            if (randomise && arc4random_uniform(2) == 0) {
-                cellView.alive = true
-                cellView.fillColor = GameScene.aliveColour
-            }
+    func newGame() {
+        model.cellViewInnerArray.forEach {
+            $0.age = 0
+            $0.alive = arc4random_uniform(2) == 0 ? true :false
+            $0.alivePrePass = false
         }
-        generation = 0
+        model.generation = 0
+
         cameraNode.run(SKAction.sequence([
             SKAction.group([SKAction.fadeOut(withDuration: 0.25), SKAction.scale(to: 1.1, duration: 0.25)]),
             SKAction.group([SKAction.scale(to: 1.0, duration: 0.25), SKAction.fadeIn(withDuration: 0.25)])]))
@@ -102,42 +95,4 @@ final class GameScene: SKScene {
         cellsView.isPaused = value
     }
 
-    private func checkLifeState(cellView: CellView) {
-        var liveNeighbouringCellCount = 0;
-        for index in cellView.matrixArray {
-            liveNeighbouringCellCount += checkCellIsAliveAt(index: index);
-        }
-        // Any live cell with fewer than two live neighbours dies, as if caused by under-population
-        if (cellView.alive && liveNeighbouringCellCount < 2) {
-            cellView.alivePrePass = false;
-            cellView.age = 0;
-        }
-        // Any live cell with two or three live neighbours lives on to the next generation
-        if (cellView.alive && (liveNeighbouringCellCount == 2 || liveNeighbouringCellCount == 3)) {
-            cellView.alivePrePass = true;
-            cellView.age += 1
-        }
-        // Any live cell with more than three live neighbours dies, as if by overcrowding
-        if (cellView.alive && liveNeighbouringCellCount > 3) {
-            cellView.alivePrePass = false;
-            cellView.age = 0;
-        }
-        // Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction
-        if (!cellView.alive && liveNeighbouringCellCount == 3) {
-            cellView.alivePrePass = true;
-            cellView.age = 0;
-        }
-    }
-
-    private func updateLifeState(cellView: CellView) {
-        cellView.alive = cellView.alivePrePass;
-        cellView.fillColor = cellView.alive ? UIColor(hue: (CGFloat(cellView.age) * 0.03), saturation: 1.0, brightness: 1.0, alpha: 1.0) : GameScene.deadColour
-    }
-
-    private func checkCellIsAliveAt(index: Int) -> Int {
-        if index >= cellViewArray.count {
-            return 0
-        }
-        return cellViewArray[index].alive ? 1 : 0
-    }
 }
