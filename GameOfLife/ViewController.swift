@@ -11,13 +11,11 @@ import SpriteKit
 class ViewController: UIViewController {
     @IBOutlet private weak var cellsView: SKView!
     @IBOutlet private weak var pauseButton: UIButton!
-
-    private var gameController: GameScene?
-    private var isPaused = false
+    private var gameScene: GameScene?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        gameController = GameScene(cellsView: cellsView)
+        gameScene = GameScene(cellsView: cellsView, viewModel: GameSceneModel(isIPad: UIDevice.current.userInterfaceIdiom == .pad))
     }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -25,13 +23,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func newTapped(_ sender: Any) {
-        gameController?.newGame()
+        gameScene?.newGame()
     }
 
     @IBAction func pauseTapped(_ sender: Any) {
-        isPaused.toggle()
-        gameController?.pauseGame(value: isPaused)
-        pauseButton.setTitle(isPaused ? "Continue" : "Pause", for: .normal)
+        gameScene?.togglePaused()
+        pauseButton.setTitle(gameScene?.title, for: .normal)
     }
 }
-

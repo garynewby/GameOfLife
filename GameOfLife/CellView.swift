@@ -9,7 +9,7 @@
 import SpriteKit
 
 protocol CellViewDelegate: AnyObject {
-    func toggleAlive()
+    func cellViewDidToggleAlive(_ cellView: CellView)
 }
 
 final class CellView: SKShapeNode {
@@ -28,6 +28,6 @@ final class CellView: SKShapeNode {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        delegate?.toggleAlive()
+        delegate?.cellViewDidToggleAlive(self)
     }
 }

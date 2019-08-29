@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CellState: CellViewDelegate {
+class CellViewModel: CellViewDelegate {
     var age: Int
     var matrixArray: [Int]
     var view: CellView
@@ -30,7 +30,7 @@ class CellState: CellViewDelegate {
 
     // MARK: - CellViewDelegate
 
-    func toggleAlive() {
+    func cellViewDidToggleAlive(_ cellView: CellView) {
         alive.toggle()
     }
 

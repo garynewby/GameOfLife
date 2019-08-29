@@ -6,21 +6,21 @@
 //  Copyright © 2019 Gary Newby. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-final class GameModel {
-    var cellViewArray: [CellState] = []
-    var cellViewInnerArray: [CellState] = []
+final class GameSceneModel {
+    var cellViewArray: [CellViewModel] = []
+    var cellViewInnerArray: [CellViewModel] = []
     var generation: Int = 0
     var rows: Int = 0
     var columns: Int
 
-    init() {
-        // add 2 columns for left/right borders
-        columns = UIDevice.current.userInterfaceIdiom == .pad ? 46 : 30
+    init(isIPad: Bool) {
+        columns = isIPad ? 44 : 28
+        columns += 2// add 2 columns for left/right borders
     }
 
-    func checkLifeState(cellState: CellState) {
+    func checkLifeState(cellState: CellViewModel) {
         func checkCellIsAliveAt(index: Int) -> Bool {
             if index >= cellViewArray.count {
                 return false
@@ -53,4 +53,18 @@ final class GameModel {
         }
     }
 
+    func addInnerCell(cellState: CellViewModel, row: Int, column: Int) {
+        if row > 0 && row < (rows - 1) && column >= 1 && column < (columns - 1) {
+            cellViewInnerArray.append(cellState)
+        }
+    }
+
+    func newGame() {
+        cellViewInnerArray.forEach {
+            $0.age = 0
+            $0.alive = arc4random_uniform(2) == 0 ? true :false
+            $0.alivePrePass = false
+        }
+        generation = 0
+    }
 }
