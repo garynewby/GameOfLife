@@ -1,5 +1,7 @@
-Game of Life iOS
-------------------
+Game of Life
+------------
+
+Swift, UIKit, programatic UI
 
 <img src="https://github.com/garynewby/Game-of-Life/blob/master/GameOfLife/Assets.xcassets/GOL.imageset/GOL.png" width="320">
 
@@ -16,9 +18,8 @@ Rules:
 
 Implementation Notes
 --------------------
-Tap "New" to start from a random state, and "Stop" or "Continue" to halt or continue iterating.  
-Tap any cell to change it's state while running or stopped, to influence the patterns that will evolve.  
-Requires iOS 9+
+Tap "New" to start from a random state, and "Pause/Continue" to halt or continue iterating.  
+Tap any cell to change it's state while running or stopped, to influence the patterns that will evolve.
 
 Author
 ------
