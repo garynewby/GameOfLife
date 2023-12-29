@@ -3,12 +3,12 @@
 //  GameOfLife
 //
 //  Created by Gary Newby on 5/2/19.
-//  Copyright © 2019 Gary Newby. All rights reserved.
 //
 
 import SpriteKit
 
 final class GameScene: SKScene {
+    
     private var cellsView: SKView
     private let cellSpace: CGFloat = 1.0
     private let cameraNode = SKCameraNode()
@@ -16,6 +16,7 @@ final class GameScene: SKScene {
     static let backColour: UIColor = UIColor.black
     static let aliveColour: UIColor = UIColor(white: 1.0, alpha: 1.0)
     static let deadColour: UIColor = UIColor(white: 0.25, alpha: 1.0)
+   
     var title: String {
         return cellsView.isPaused ? "Continue" : "Pause"
     }
@@ -24,10 +25,13 @@ final class GameScene: SKScene {
         self.viewModel = viewModel
         self.cellsView = cellsView
         super.init(size: cellsView.bounds.size)
+        
         addCells()
+        
         cellsView.presentScene(scene)
-        cellsView.preferredFramesPerSecond = 25
+        cellsView.preferredFramesPerSecond = 15
         cellsView.isPaused = false
+        
         backgroundColor = GameScene.backColour
         cameraNode.position = CGPoint(x: size.width / 2.0, y: size.height / 2.0)
         addChild(cameraNode)

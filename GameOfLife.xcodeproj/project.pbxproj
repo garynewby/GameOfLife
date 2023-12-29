@@ -3,76 +3,37 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E244BEC230C6B1900D4967D /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E244BEB230C6B1900D4967D /* CellViewModel.swift */; };
-		4E2A959C227B8BC100226240 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2A959B227B8BC100226240 /* AppDelegate.swift */; };
-		4E2A959E227B8BC100226240 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2A959D227B8BC100226240 /* ViewController.swift */; };
-		4E2A95A3227B8BC100226240 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E2A95A2227B8BC100226240 /* Assets.xcassets */; };
-		4E2A95A6227B8BC100226240 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E2A95A4227B8BC100226240 /* LaunchScreen.storyboard */; };
-		4E2A95B1227B8BC100226240 /* GameOfLifeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2A95B0227B8BC100226240 /* GameOfLifeTests.swift */; };
-		4E2A95BC227B8BC100226240 /* GameOfLifeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2A95BB227B8BC100226240 /* GameOfLifeUITests.swift */; };
-		4E2A95CB227B8E0200226240 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2A95CA227B8E0200226240 /* GameScene.swift */; };
-		4E2A95CD227B904B00226240 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2A95CC227B904B00226240 /* CellView.swift */; };
-		4E2A95D0227BA9E100226240 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E2A95CE227BA9E100226240 /* Main.storyboard */; };
-		4EA2704F2316B67600D57AEC /* GameSceneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA2704E2316B67600D57AEC /* GameSceneModel.swift */; };
+		4E0E0B1D2B3F185000242D33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E0B1C2B3F185000242D33 /* AppDelegate.swift */; };
+		4E0E0B1F2B3F185000242D33 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E0B1E2B3F185000242D33 /* SceneDelegate.swift */; };
+		4E0E0B212B3F185000242D33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E0B202B3F185000242D33 /* ViewController.swift */; };
+		4E0E0B232B3F185100242D33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E0E0B222B3F185100242D33 /* Assets.xcassets */; };
+		4E0E0B262B3F185100242D33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E0E0B242B3F185100242D33 /* LaunchScreen.storyboard */; };
+		4E0E0B312B3F1BA700242D33 /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E0B2D2B3F1BA700242D33 /* CellViewModel.swift */; };
+		4E0E0B322B3F1BA700242D33 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E0B2E2B3F1BA700242D33 /* CellView.swift */; };
+		4E0E0B332B3F1BA700242D33 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E0B2F2B3F1BA700242D33 /* GameScene.swift */; };
+		4E0E0B342B3F1BA700242D33 /* GameSceneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E0B302B3F1BA700242D33 /* GameSceneModel.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		4E2A95AD227B8BC100226240 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4E2A9590227B8BC100226240 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4E2A9597227B8BC100226240;
-			remoteInfo = GameOfLife;
-		};
-		4E2A95B8227B8BC100226240 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4E2A9590227B8BC100226240 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4E2A9597227B8BC100226240;
-			remoteInfo = GameOfLife;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		4E244BEB230C6B1900D4967D /* CellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
-		4E2A9598227B8BC100226240 /* GameOfLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameOfLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E2A959B227B8BC100226240 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4E2A959D227B8BC100226240 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4E2A95A2227B8BC100226240 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4E2A95A5227B8BC100226240 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4E2A95A7227B8BC100226240 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4E2A95AC227B8BC100226240 /* GameOfLifeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameOfLifeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E2A95B0227B8BC100226240 /* GameOfLifeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOfLifeTests.swift; sourceTree = "<group>"; };
-		4E2A95B2227B8BC100226240 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4E2A95B7227B8BC100226240 /* GameOfLifeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameOfLifeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E2A95BB227B8BC100226240 /* GameOfLifeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOfLifeUITests.swift; sourceTree = "<group>"; };
-		4E2A95BD227B8BC100226240 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4E2A95CA227B8E0200226240 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		4E2A95CC227B904B00226240 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
-		4E2A95CF227BA9E100226240 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4EA2704E2316B67600D57AEC /* GameSceneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneModel.swift; sourceTree = "<group>"; };
+		4E0E0B192B3F185000242D33 /* GameOfLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameOfLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E0E0B1C2B3F185000242D33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4E0E0B1E2B3F185000242D33 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4E0E0B202B3F185000242D33 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4E0E0B222B3F185100242D33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4E0E0B252B3F185100242D33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4E0E0B272B3F185100242D33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E0E0B2D2B3F1BA700242D33 /* CellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
+		4E0E0B2E2B3F1BA700242D33 /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		4E0E0B2F2B3F1BA700242D33 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		4E0E0B302B3F1BA700242D33 /* GameSceneModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSceneModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4E2A9595227B8BC100226240 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4E2A95A9227B8BC100226240 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4E2A95B4227B8BC100226240 /* Frameworks */ = {
+		4E0E0B162B3F185000242D33 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -82,79 +43,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4E2A958F227B8BC100226240 = {
+		4E0E0B102B3F185000242D33 = {
 			isa = PBXGroup;
 			children = (
-				4E2A959A227B8BC100226240 /* GameOfLife */,
-				4E2A95AF227B8BC100226240 /* GameOfLifeTests */,
-				4E2A95BA227B8BC100226240 /* GameOfLifeUITests */,
-				4E2A9599227B8BC100226240 /* Products */,
+				4E0E0B1B2B3F185000242D33 /* GameOfLife */,
+				4E0E0B1A2B3F185000242D33 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		4E2A9599227B8BC100226240 /* Products */ = {
+		4E0E0B1A2B3F185000242D33 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4E2A9598227B8BC100226240 /* GameOfLife.app */,
-				4E2A95AC227B8BC100226240 /* GameOfLifeTests.xctest */,
-				4E2A95B7227B8BC100226240 /* GameOfLifeUITests.xctest */,
+				4E0E0B192B3F185000242D33 /* GameOfLife.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4E2A959A227B8BC100226240 /* GameOfLife */ = {
+		4E0E0B1B2B3F185000242D33 /* GameOfLife */ = {
 			isa = PBXGroup;
 			children = (
-				4E2A959B227B8BC100226240 /* AppDelegate.swift */,
-				4E2A959D227B8BC100226240 /* ViewController.swift */,
-				4E2A95CA227B8E0200226240 /* GameScene.swift */,
-				4EA2704E2316B67600D57AEC /* GameSceneModel.swift */,
-				4E2A95CC227B904B00226240 /* CellView.swift */,
-				4E244BEB230C6B1900D4967D /* CellViewModel.swift */,
-				4E2A95C9227B8BD100226240 /* Supporting */,
+				4E0E0B1C2B3F185000242D33 /* AppDelegate.swift */,
+				4E0E0B1E2B3F185000242D33 /* SceneDelegate.swift */,
+				4E0E0B202B3F185000242D33 /* ViewController.swift */,
+				4E0E0B2E2B3F1BA700242D33 /* CellView.swift */,
+				4E0E0B2D2B3F1BA700242D33 /* CellViewModel.swift */,
+				4E0E0B2F2B3F1BA700242D33 /* GameScene.swift */,
+				4E0E0B302B3F1BA700242D33 /* GameSceneModel.swift */,
+				4E0E0B222B3F185100242D33 /* Assets.xcassets */,
+				4E0E0B242B3F185100242D33 /* LaunchScreen.storyboard */,
+				4E0E0B272B3F185100242D33 /* Info.plist */,
 			);
 			path = GameOfLife;
-			sourceTree = "<group>";
-		};
-		4E2A95AF227B8BC100226240 /* GameOfLifeTests */ = {
-			isa = PBXGroup;
-			children = (
-				4E2A95B0227B8BC100226240 /* GameOfLifeTests.swift */,
-				4E2A95B2227B8BC100226240 /* Info.plist */,
-			);
-			path = GameOfLifeTests;
-			sourceTree = "<group>";
-		};
-		4E2A95BA227B8BC100226240 /* GameOfLifeUITests */ = {
-			isa = PBXGroup;
-			children = (
-				4E2A95BB227B8BC100226240 /* GameOfLifeUITests.swift */,
-				4E2A95BD227B8BC100226240 /* Info.plist */,
-			);
-			path = GameOfLifeUITests;
-			sourceTree = "<group>";
-		};
-		4E2A95C9227B8BD100226240 /* Supporting */ = {
-			isa = PBXGroup;
-			children = (
-				4E2A95A2227B8BC100226240 /* Assets.xcassets */,
-				4E2A95CE227BA9E100226240 /* Main.storyboard */,
-				4E2A95A4227B8BC100226240 /* LaunchScreen.storyboard */,
-				4E2A95A7227B8BC100226240 /* Info.plist */,
-			);
-			name = Supporting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4E2A9597227B8BC100226240 /* GameOfLife */ = {
+		4E0E0B182B3F185000242D33 /* GameOfLife */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4E2A95C0227B8BC100226240 /* Build configuration list for PBXNativeTarget "GameOfLife" */;
+			buildConfigurationList = 4E0E0B2A2B3F185100242D33 /* Build configuration list for PBXNativeTarget "GameOfLife" */;
 			buildPhases = (
-				4E2A9594227B8BC100226240 /* Sources */,
-				4E2A9595227B8BC100226240 /* Frameworks */,
-				4E2A9596227B8BC100226240 /* Resources */,
+				4E0E0B152B3F185000242D33 /* Sources */,
+				4E0E0B162B3F185000242D33 /* Frameworks */,
+				4E0E0B172B3F185000242D33 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -162,188 +93,91 @@
 			);
 			name = GameOfLife;
 			productName = GameOfLife;
-			productReference = 4E2A9598227B8BC100226240 /* GameOfLife.app */;
+			productReference = 4E0E0B192B3F185000242D33 /* GameOfLife.app */;
 			productType = "com.apple.product-type.application";
-		};
-		4E2A95AB227B8BC100226240 /* GameOfLifeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4E2A95C3227B8BC100226240 /* Build configuration list for PBXNativeTarget "GameOfLifeTests" */;
-			buildPhases = (
-				4E2A95A8227B8BC100226240 /* Sources */,
-				4E2A95A9227B8BC100226240 /* Frameworks */,
-				4E2A95AA227B8BC100226240 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4E2A95AE227B8BC100226240 /* PBXTargetDependency */,
-			);
-			name = GameOfLifeTests;
-			productName = GameOfLifeTests;
-			productReference = 4E2A95AC227B8BC100226240 /* GameOfLifeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		4E2A95B6227B8BC100226240 /* GameOfLifeUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4E2A95C6227B8BC100226240 /* Build configuration list for PBXNativeTarget "GameOfLifeUITests" */;
-			buildPhases = (
-				4E2A95B3227B8BC100226240 /* Sources */,
-				4E2A95B4227B8BC100226240 /* Frameworks */,
-				4E2A95B5227B8BC100226240 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4E2A95B9227B8BC100226240 /* PBXTargetDependency */,
-			);
-			name = GameOfLifeUITests;
-			productName = GameOfLifeUITests;
-			productReference = 4E2A95B7227B8BC100226240 /* GameOfLifeUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4E2A9590227B8BC100226240 /* Project object */ = {
+		4E0E0B112B3F185000242D33 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1020;
-				ORGANIZATIONNAME = "Gary Newby";
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
 				TargetAttributes = {
-					4E2A9597227B8BC100226240 = {
-						CreatedOnToolsVersion = 10.2.1;
-					};
-					4E2A95AB227B8BC100226240 = {
-						CreatedOnToolsVersion = 10.2.1;
-						TestTargetID = 4E2A9597227B8BC100226240;
-					};
-					4E2A95B6227B8BC100226240 = {
-						CreatedOnToolsVersion = 10.2.1;
-						TestTargetID = 4E2A9597227B8BC100226240;
+					4E0E0B182B3F185000242D33 = {
+						CreatedOnToolsVersion = 15.1;
 					};
 				};
 			};
-			buildConfigurationList = 4E2A9593227B8BC100226240 /* Build configuration list for PBXProject "GameOfLife" */;
-			compatibilityVersion = "Xcode 9.3";
+			buildConfigurationList = 4E0E0B142B3F185000242D33 /* Build configuration list for PBXProject "GameOfLife" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 4E2A958F227B8BC100226240;
-			productRefGroup = 4E2A9599227B8BC100226240 /* Products */;
+			mainGroup = 4E0E0B102B3F185000242D33;
+			productRefGroup = 4E0E0B1A2B3F185000242D33 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4E2A9597227B8BC100226240 /* GameOfLife */,
-				4E2A95AB227B8BC100226240 /* GameOfLifeTests */,
-				4E2A95B6227B8BC100226240 /* GameOfLifeUITests */,
+				4E0E0B182B3F185000242D33 /* GameOfLife */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4E2A9596227B8BC100226240 /* Resources */ = {
+		4E0E0B172B3F185000242D33 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E2A95D0227BA9E100226240 /* Main.storyboard in Resources */,
-				4E2A95A6227B8BC100226240 /* LaunchScreen.storyboard in Resources */,
-				4E2A95A3227B8BC100226240 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4E2A95AA227B8BC100226240 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4E2A95B5227B8BC100226240 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				4E0E0B232B3F185100242D33 /* Assets.xcassets in Resources */,
+				4E0E0B262B3F185100242D33 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4E2A9594227B8BC100226240 /* Sources */ = {
+		4E0E0B152B3F185000242D33 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E244BEC230C6B1900D4967D /* CellViewModel.swift in Sources */,
-				4E2A95CD227B904B00226240 /* CellView.swift in Sources */,
-				4E2A959E227B8BC100226240 /* ViewController.swift in Sources */,
-				4E2A95CB227B8E0200226240 /* GameScene.swift in Sources */,
-				4E2A959C227B8BC100226240 /* AppDelegate.swift in Sources */,
-				4EA2704F2316B67600D57AEC /* GameSceneModel.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4E2A95A8227B8BC100226240 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4E2A95B1227B8BC100226240 /* GameOfLifeTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4E2A95B3227B8BC100226240 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4E2A95BC227B8BC100226240 /* GameOfLifeUITests.swift in Sources */,
+				4E0E0B332B3F1BA700242D33 /* GameScene.swift in Sources */,
+				4E0E0B212B3F185000242D33 /* ViewController.swift in Sources */,
+				4E0E0B322B3F1BA700242D33 /* CellView.swift in Sources */,
+				4E0E0B1D2B3F185000242D33 /* AppDelegate.swift in Sources */,
+				4E0E0B312B3F1BA700242D33 /* CellViewModel.swift in Sources */,
+				4E0E0B342B3F1BA700242D33 /* GameSceneModel.swift in Sources */,
+				4E0E0B1F2B3F185000242D33 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		4E2A95AE227B8BC100226240 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4E2A9597227B8BC100226240 /* GameOfLife */;
-			targetProxy = 4E2A95AD227B8BC100226240 /* PBXContainerItemProxy */;
-		};
-		4E2A95B9227B8BC100226240 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4E2A9597227B8BC100226240 /* GameOfLife */;
-			targetProxy = 4E2A95B8227B8BC100226240 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		4E2A95A4227B8BC100226240 /* LaunchScreen.storyboard */ = {
+		4E0E0B242B3F185100242D33 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4E2A95A5227B8BC100226240 /* Base */,
+				4E0E0B252B3F185100242D33 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		4E2A95CE227BA9E100226240 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4E2A95CF227BA9E100226240 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		4E2A95BE227B8BC100226240 /* Debug */ = {
+		4E0E0B282B3F185100242D33 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -362,18 +196,19 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -387,24 +222,25 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		4E2A95BF227B8BC100226240 /* Release */ = {
+		4E0E0B292B3F185100242D33 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -423,18 +259,19 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -442,174 +279,92 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		4E2A95C1227B8BC100226240 /* Debug */ = {
+		4E0E0B2B2B3F185100242D33 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RP89MENV25;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 72C3VH3A7C;
+				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GameOfLife/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.garynewby.GameOfLife;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mellowmuse.GameOfLife;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		4E2A95C2227B8BC100226240 /* Release */ = {
+		4E0E0B2C2B3F185100242D33 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RP89MENV25;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 72C3VH3A7C;
+				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GameOfLife/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.garynewby.GameOfLife;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mellowmuse.GameOfLife;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		4E2A95C4227B8BC100226240 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RP89MENV25;
-				INFOPLIST_FILE = GameOfLifeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.garynewby.GameOfLifeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GameOfLife.app/GameOfLife";
-			};
-			name = Debug;
-		};
-		4E2A95C5227B8BC100226240 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RP89MENV25;
-				INFOPLIST_FILE = GameOfLifeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.garynewby.GameOfLifeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GameOfLife.app/GameOfLife";
-			};
-			name = Release;
-		};
-		4E2A95C7227B8BC100226240 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RP89MENV25;
-				INFOPLIST_FILE = GameOfLifeUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.garynewby.GameOfLifeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = GameOfLife;
-			};
-			name = Debug;
-		};
-		4E2A95C8227B8BC100226240 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RP89MENV25;
-				INFOPLIST_FILE = GameOfLifeUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.garynewby.GameOfLifeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = GameOfLife;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4E2A9593227B8BC100226240 /* Build configuration list for PBXProject "GameOfLife" */ = {
+		4E0E0B142B3F185000242D33 /* Build configuration list for PBXProject "GameOfLife" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4E2A95BE227B8BC100226240 /* Debug */,
-				4E2A95BF227B8BC100226240 /* Release */,
+				4E0E0B282B3F185100242D33 /* Debug */,
+				4E0E0B292B3F185100242D33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4E2A95C0227B8BC100226240 /* Build configuration list for PBXNativeTarget "GameOfLife" */ = {
+		4E0E0B2A2B3F185100242D33 /* Build configuration list for PBXNativeTarget "GameOfLife" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4E2A95C1227B8BC100226240 /* Debug */,
-				4E2A95C2227B8BC100226240 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4E2A95C3227B8BC100226240 /* Build configuration list for PBXNativeTarget "GameOfLifeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4E2A95C4227B8BC100226240 /* Debug */,
-				4E2A95C5227B8BC100226240 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4E2A95C6227B8BC100226240 /* Build configuration list for PBXNativeTarget "GameOfLifeUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4E2A95C7227B8BC100226240 /* Debug */,
-				4E2A95C8227B8BC100226240 /* Release */,
+				4E0E0B2B2B3F185100242D33 /* Debug */,
+				4E0E0B2C2B3F185100242D33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 4E2A9590227B8BC100226240 /* Project object */;
+	rootObject = 4E0E0B112B3F185000242D33 /* Project object */;
 }

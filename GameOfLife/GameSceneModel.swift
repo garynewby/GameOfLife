@@ -3,12 +3,12 @@
 //  GameOfLife
 //
 //  Created by Gary Newby on 8/28/19.
-//  Copyright © 2019 Gary Newby. All rights reserved.
 //
 
 import Foundation
 
 final class GameSceneModel {
+    
     var cellViewArray: [CellViewModel] = []
     var cellViewInnerArray: [CellViewModel] = []
     var generation: Int = 0
@@ -18,6 +18,15 @@ final class GameSceneModel {
     init(isIPad: Bool) {
         columns = isIPad ? 44 : 28
         columns += 2// add 2 columns for left/right borders
+    }
+    
+    func newGame() {
+        cellViewInnerArray.forEach {
+            $0.age = 0
+            $0.alive = arc4random_uniform(2) == 0 ? true :false
+            $0.alivePrePass = false
+        }
+        generation = 0
     }
 
     func checkLifeState(cellState: CellViewModel) {
@@ -57,14 +66,5 @@ final class GameSceneModel {
         if row > 0 && row < (rows - 1) && column >= 1 && column < (columns - 1) {
             cellViewInnerArray.append(cellState)
         }
-    }
-
-    func newGame() {
-        cellViewInnerArray.forEach {
-            $0.age = 0
-            $0.alive = arc4random_uniform(2) == 0 ? true :false
-            $0.alivePrePass = false
-        }
-        generation = 0
     }
 }

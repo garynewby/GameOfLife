@@ -2,13 +2,13 @@
 //  GameModel.swift
 //  GameOfLife
 //
-//  Created by Gary Newby on 8/20/19.
-//  Copyright © 2019 Gary Newby. All rights reserved.
+//  Created by Gary Newby on 8/20/19
 //
 
 import UIKit
 
 class CellViewModel: CellViewDelegate {
+    
     var age: Int
     var matrixArray: [Int]
     var view: CellView

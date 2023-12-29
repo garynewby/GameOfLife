@@ -3,7 +3,6 @@
 //  GameOfLife
 //
 //  Created by Gary Newby on 5/2/19.
-//  Copyright © 2019 Gary Newby. All rights reserved.
 //
 
 import SpriteKit
@@ -13,6 +12,7 @@ protocol CellViewDelegate: AnyObject {
 }
 
 final class CellView: SKShapeNode {
+    
     weak var delegate: CellViewDelegate?
 
     init(frame: CGRect) {
