@@ -1,7 +1,7 @@
 Game of Life
 ------------
 
-Swift, UIKit, programatic UI
+Swift, SpriteKit and UIKit
 
 <img src="https://github.com/garynewby/Game-of-Life/blob/master/GameOfLife/Assets.xcassets/GOL.imageset/GOL.png" width="320">
 
