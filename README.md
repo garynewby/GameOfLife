@@ -1,8 +1,5 @@
-Game of Life
+Game of life
 ------------
-
-Swift, SpriteKit and UIKit
-
 <img src="https://github.com/garynewby/Game-of-Life/blob/master/GameOfLife/Assets.xcassets/GOL.imageset/GOL.png" width="320">
 
 A cellular automaton devised by the British mathematician John Horton Conway in 1970.  
@@ -16,7 +13,11 @@ Rules:
 3. Any live cell with more than three live neighbours dies, as if by overcrowding.  
 4. Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.  
 
-Implementation Notes
+Implementation
+--------------------
+Swift, SpriteKit and UIKit
+
+Notes
 --------------------
 Tap "New" to start from a random state, and "Pause/Continue" to halt or continue iterating.  
 Tap any cell to change it's state while running or stopped, to influence the patterns that will evolve.
